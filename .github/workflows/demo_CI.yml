@@ -8,11 +8,11 @@ jobs:
 
     steps:
       - name: Hello Step
-        run: echo "This is my 1st Build"
+        run: echo "Hello ${{vars.MYNAME}} This is my 1st Build"
   Deployment:
     runs-on: ubuntu-latest
     needs: Build
 
     steps:
       - name: Hello Deployment
-        run: echo "This is my 1st deployment"
+        run: echo "Hello ${{vars.MYNAME}}This is my 1st deployment"
